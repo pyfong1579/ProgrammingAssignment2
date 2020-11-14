@@ -60,7 +60,7 @@ cacheSolve <- function(x, ...) {
   data <- x$get()
   
   ## Calculate & assign the inverse matrix using matrix multiplication
-  m <- solve(data) %*% data
+  m <- solve(data, ...) 
   
   ## Set the inverse matrix to the function
   x$setInverse(m)
